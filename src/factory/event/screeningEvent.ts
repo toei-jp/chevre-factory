@@ -77,7 +77,7 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      * 発売開始日
      * ISO 8601 date format
      */
-    releaseTime: Date;
+    releaseTime?: Date;
 }
 /**
  * 上映イベントインターフェース
