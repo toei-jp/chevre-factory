@@ -73,6 +73,11 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      * 券種グループID
      */
     ticketTypeGroup: string;
+    /**
+     * 発売開始日
+     * ISO 8601 date format
+     */
+    releaseTime: Date;
 }
 /**
  * 上映イベントインターフェース
