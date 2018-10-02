@@ -74,6 +74,10 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      */
     ticketTypeGroup: string;
     /**
+     * ムビチケ対象外
+     */
+    mvtkExcludeFlg: string;
+    /**
      * 発売開始日
      * ISO 8601 date format
      */

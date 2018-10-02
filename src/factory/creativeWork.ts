@@ -16,4 +16,12 @@ export interface ICreativeWork {
     license?: string;
     thumbnailUrl?: string;
     typeOf: CreativeWorkType;
+    subtitle?: string;
+    scheduleEndDate?: Date;
+    /**
+     * 配給
+     * 0 = 自社
+     * 1 = 他社
+     */
+    distribution: number;
 }

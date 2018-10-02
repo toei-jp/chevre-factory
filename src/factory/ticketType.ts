@@ -5,6 +5,12 @@ export interface ITicketTypeAttributes {
     description: IMultilingualString;
     notes: IMultilingualString;
     charge: number;
+    boxOnly: boolean;
+    nameForManagementSite: string;
+    nameForPrinting: string;
+    seatReservationUnit: number;
+    subject: number;
+    subjectException?: number;
 }
 /**
  * 券種インターフェース

@@ -64,6 +64,26 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      */
     alternativeHeadline: string;
     /**
+     * 上映作品サブタイトル名
+     */
+    movieSubtitleName?: string;
+    /**
+     * サイネージ表示名(半角カタカナ入力可)
+     */
+    signageDisplayName?: string;
+    /**
+     * サイネージ表示名サブタイトル
+     */
+    signageDislaySubtitleName?: string;
+    /**
+     * 集計開始曜日
+     */
+    summaryStartDay: string;
+    /**
+     * ムビチケ利用
+     */
+    mvtkFlg: string;
+    /**
      * イベント名称
      */
     name: IMultilingualString;
