@@ -21,4 +21,16 @@ export interface IPlace {
     smokingAllowed?: boolean;
     telephone?: string;
     url?: string;
+    /**
+     * 販売開始日
+     */
+    saleStartDate?: number;
+    /**
+     * 上映後販売終了時間
+     */
+    endSaleTimeAfterScreening?: number;
+    /**
+     * 座席購入上限数
+     */
+    seatPurchaseLimit?: number;
 }

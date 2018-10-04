@@ -1,4 +1,5 @@
 import * as CreativeWorkFactory from '../creativeWork';
+import { IDistributions } from '../distributions/distribute';
 import SortType from '../sortType';
 
 /**
@@ -15,6 +16,13 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
      * 映倫区分(PG12,R15,R18)
      */
     contentRating: string;
+	datePublished?: Date;
+	subtitle?: string;
+    scheduleEndDate?: Date;
+    /**
+     * 配給
+     */
+    distribution: IDistributions;
 }
 /**
  * ソート条件インターフェース
@@ -32,4 +40,6 @@ export interface ISearchConditions {
     sort?: ISortOrder;
     identifier?: string;
     name?: string;
+    datePublishedFrom?: Date;
+    datePublishedTo?: Date;
 }

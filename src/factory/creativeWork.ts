@@ -1,4 +1,5 @@
 import CreativeWorkType from './creativeWorkType';
+import { IDistributions } from './distributions/distribute';
 
 export interface ICopyrightHolder {
     name: string;
@@ -20,8 +21,6 @@ export interface ICreativeWork {
     scheduleEndDate?: Date;
     /**
      * 配給
-     * 0 = 自社
-     * 1 = 他社
      */
-    distribution: number;
+    distribution: IDistributions;
 }

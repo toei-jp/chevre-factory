@@ -12,6 +12,7 @@ import * as ClientUserFactory from './factory/clientUser';
 import * as EmailMessageFactory from './factory/creativeWork/message/email';
 import * as MovieCreativeWorkFactory from './factory/creativeWork/movie';
 import CreativeWorkType from './factory/creativeWorkType';
+import * as DistributionsFactory from './factory/distributions/distribute';
 import * as ScreeningEventFactory from './factory/event/screeningEvent';
 import * as ScreeningEventSeriesFactory from './factory/event/screeningEventSeries';
 import EventStatusType from './factory/eventStatusType';
@@ -158,6 +159,9 @@ export namespace task {
     export import cancelPendingReservation = CancelPendingReservationTaskFactory;
     export import cancelReservation = CancelReservationTaskFactory;
     export import reserve = ReserveTaskFactory;
+}
+export namespace distributions {
+    export import distribute = DistributionsFactory;
 }
 export import sortType = SortType;
 export import taskExecutionResult = TaskExecutionResultFactory;
