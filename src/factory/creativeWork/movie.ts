@@ -16,8 +16,8 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
      * 映倫区分(PG12,R15,R18)
      */
     contentRating: string;
-	datePublished?: Date;
-	subtitle?: string;
+    datePublished?: Date;
+    subtitle?: string;
     scheduleEndDate?: Date;
     /**
      * 配給
