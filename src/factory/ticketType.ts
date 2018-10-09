@@ -24,7 +24,7 @@ export type ITicketType = ITicketTypeAttributes & {
 export interface ITicketTypeSearchConditions {
     limit?: number;
     page?: number;
-    id?: string;
+    id?: any;
     name?: string;
 }
 export interface ITicketTypeGroupAttributes {

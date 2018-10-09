@@ -84,6 +84,14 @@ export interface IPlaceWithoutScreeningRoom extends PlaceFactory.IPlace {
      * 座席購入上限数
      */
     seatPurchaseLimit?: number;
+    /**
+     * サブタイトル
+     */
+    movieSubtitleName?: string;
+    /**
+     * 字幕
+     */
+    subtitleLanguage?: number;
 }
 /**
  * 劇場施設インターフェース

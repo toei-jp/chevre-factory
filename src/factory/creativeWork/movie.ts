@@ -25,6 +25,12 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
     distribution: IDistributions;
 }
 /**
+ * 映倫区分作品インターフェース
+ */
+export interface ICreativeWorkRating extends CreativeWorkFactory.ICreativeWork {
+    contentRating: string;
+}
+/**
  * ソート条件インターフェース
  */
 export interface ISortOrder {
@@ -42,4 +48,5 @@ export interface ISearchConditions {
     name?: string;
     datePublishedFrom?: Date;
     datePublishedTo?: Date;
+    checkScheduleEndDate?: boolean;
 }

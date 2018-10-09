@@ -20,7 +20,7 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     /**
      * 字幕利用可能言語
      */
-    subtitleLanguage?: string;
+    subtitleLanguage?: number;
     /**
      * 映像区分(２D、３D)
      */
@@ -78,11 +78,15 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     /**
      * 集計開始曜日
      */
-    summaryStartDay: string;
+    summaryStartDay: number;
     /**
      * ムビチケ利用
      */
-    mvtkFlg: string;
+    mvtkFlg: number;
+    /**
+     * 補足説明
+     */
+    description?: IMultilingualString;
     /**
      * イベント名称
      */
