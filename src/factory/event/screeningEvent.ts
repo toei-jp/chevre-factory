@@ -77,6 +77,26 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      * ムビチケ対象外
      */
     mvtkExcludeFlg: string;
+    /**
+     * 販売開始日
+     */
+    saleStartDate?: Date;
+    /**
+     * オンライン表示開始日
+     */
+    onlineDisplayStartDate?: Date;
+    /**
+     * 上限枚数
+     */
+    maxSeatNumber: number;
+    /**
+     * 先行販売フラグ
+     */
+    preSaleFlg: number;
+    /**
+     * 上映後販売終了時間
+     */
+    endSaleTimeAfterScreening?: number;
 }
 /**
  * 上映イベントインターフェース
