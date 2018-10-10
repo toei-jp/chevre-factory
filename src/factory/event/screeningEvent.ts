@@ -82,6 +82,22 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      * ISO 8601 date format
      */
     releaseTime?: Date;
+    /**
+     * 販売開始日
+     */
+    saleStartDate?: Date;
+    /**
+     * オンライン表示開始日
+     */
+    onlineDisplayStartDate?: Date;
+    /**
+     * 上限枚数
+     */
+    maxSheetNumber?: number;
+    /**
+     * 先行販売フラグ
+     */
+    precedingSaleFlg?: number;
 }
 /**
  * 上映イベントインターフェース

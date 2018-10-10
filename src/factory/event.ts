@@ -68,6 +68,22 @@ export interface IAttributes<T extends EventType> {
      * イベントで上演される作品
      */
     workPerformed?: CreativeWorkFactory.ICreativeWork;
+    /**
+     * 販売開始日
+     */
+    saleStartDate?: Date;
+    /**
+     * オンライン表示開始日
+     */
+    onlineDisplayStartDate?: Date;
+    /**
+     * 上限枚数
+     */
+    maxSheetNumber?: number;
+    /**
+     * 先行販売フラグ
+     */
+    precedingSaleFlg?: number;
 }
 /**
  * イベントインターフェース
