@@ -83,7 +83,7 @@ export interface IPlaceWithoutScreeningRoom extends PlaceFactory.IPlace {
     /**
      * 座席購入上限数
      */
-    seatPurchaseLimit?: number;
+    maxSeatNumber: number;
     /**
      * サブタイトル
      */

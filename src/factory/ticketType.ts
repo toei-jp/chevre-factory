@@ -5,6 +5,11 @@ export interface ITicketTypeAttributes {
     description: IMultilingualString;
     notes: IMultilingualString;
     charge: number;
+    onlineOnly: boolean;
+    /**
+     * 券種の種別
+     */
+    typeOfNote: number;
     boxOnly: boolean;
     nameForManagementSite: string;
     nameForPrinting: string;

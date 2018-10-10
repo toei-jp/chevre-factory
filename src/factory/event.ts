@@ -79,11 +79,15 @@ export interface IAttributes<T extends EventType> {
     /**
      * 上限枚数
      */
-    maxSheetNumber?: number;
+    maxSeatNumber: number;
     /**
      * 先行販売フラグ
      */
-    precedingSaleFlg?: number;
+    preSaleFlg: number;
+    /**
+     * 上映後販売終了時間
+     */
+    endSaleTimeAfterScreening?: number;
 }
 /**
  * イベントインターフェース

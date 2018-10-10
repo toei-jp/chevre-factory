@@ -78,26 +78,23 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      */
     mvtkExcludeFlg: string;
     /**
-     * 発売開始日
-     * ISO 8601 date format
-     */
-    releaseTime?: Date;
-    /**
      * 販売開始日
+     * ISO 8601 date format
      */
     saleStartDate?: Date;
     /**
      * オンライン表示開始日
+     * ISO 8601 date format
      */
     onlineDisplayStartDate?: Date;
     /**
      * 上限枚数
      */
-    maxSheetNumber?: number;
+    maxSheetNumber: number;
     /**
      * 先行販売フラグ
      */
-    precedingSaleFlg?: number;
+    precedingSaleFlg: number;
 }
 /**
  * 上映イベントインターフェース
