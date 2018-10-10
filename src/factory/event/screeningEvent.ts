@@ -90,11 +90,11 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     /**
      * 上限枚数
      */
-    maxSheetNumber: number;
+    maxSeatNumber: number;
     /**
      * 先行販売フラグ
      */
-    precedingSaleFlg: number;
+    preSaleFlg: number;
 }
 /**
  * 上映イベントインターフェース
