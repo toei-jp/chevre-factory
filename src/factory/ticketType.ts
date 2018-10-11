@@ -16,6 +16,7 @@ export interface ITicketTypeAttributes {
     seatReservationUnit: number;
     subject: number;
     subjectException?: number;
+    indicatorColor: string;
 }
 /**
  * 券種インターフェース
