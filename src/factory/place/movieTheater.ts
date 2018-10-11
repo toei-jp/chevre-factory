@@ -77,7 +77,7 @@ export interface IPlaceWithoutScreeningRoom extends PlaceFactory.IPlace {
      */
     saleStartDate?: number;
     /**
-     * 上映後販売終了時間
+     * 上映後販売終了時間(分)
      */
     endSaleTimeAfterScreening?: number;
     /**

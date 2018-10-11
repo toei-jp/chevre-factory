@@ -81,6 +81,8 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     summaryStartDay: number;
     /**
      * ムビチケ利用
+     * 1 = ON
+     * 0 = OFF
      */
     mvtkFlg: number;
     /**

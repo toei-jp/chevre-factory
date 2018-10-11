@@ -75,8 +75,10 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     ticketTypeGroup: string;
     /**
      * ムビチケ対象外
+     * 1 = ON
+     * 0 = OFF
      */
-    mvtkExcludeFlg: string;
+    mvtkExcludeFlg: number;
     /**
      * 販売開始日
      */
@@ -91,6 +93,8 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     maxSeatNumber: number;
     /**
      * 先行販売フラグ
+     * 1 = ON
+     * 0 = OFF
      */
     preSaleFlg: number;
     /**
