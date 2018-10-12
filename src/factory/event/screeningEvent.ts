@@ -126,6 +126,20 @@ export interface ISearchConditions {
      */
     name?: string;
     /**
+     * 先行販売フラグ
+     */
+    preSaleFlg?: number;
+    /**
+     * 販売開始日時 from
+     * ISO 8601 date format
+     */
+    saleStartFrom?: Date;
+    /**
+     * 販売開始日時 through
+     * ISO 8601 date format
+     */
+    saleStartThrough?: Date;
+    /**
      * 開催中 from
      * ISO 8601 date format
      */
