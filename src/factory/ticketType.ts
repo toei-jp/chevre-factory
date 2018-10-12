@@ -32,6 +32,7 @@ export interface ITicketTypeSearchConditions {
     page?: number;
     id?: any;
     name?: string;
+    charge?: number;
 }
 export interface ITicketTypeGroupAttributes {
     name: IMultilingualString;
