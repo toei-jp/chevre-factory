@@ -1,10 +1,9 @@
-/**
- * オファーファクトリー
- */
+import IMultilingualString from './multilingualString';
+import OfferType from './offerType';
 import PriceCurrency from './priceCurrency';
+import { IPriceSpecification } from './priceSpecification';
+import PriceSpecificationType from './priceSpecificationType';
 import { IQuantitativeValue } from './quantitativeValue';
-
-export type OfferType = 'Offer';
 
 /**
  * offer interface
@@ -14,14 +13,13 @@ export type OfferType = 'Offer';
  */
 export interface IOffer {
     typeOf: OfferType;
-    /**
-     * オファー識別子
-     */
-    identifier?: string;
+    id?: string;
+    name?: string | IMultilingualString;
+    description?: string | IMultilingualString;
     /**
      * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
      */
-    price: number;
+    price?: number;
     /**
      * The currency (in 3-letter ISO 4217 format) of the price or a price component,
      * when attached to PriceSpecification and its subtypes.
@@ -43,4 +41,8 @@ export interface IOffer {
      * オファーが有効となる地域
      */
     eligibleRegion?: any;
+    /**
+     * 価格仕様
+     */
+    priceSpecification?: IPriceSpecification<PriceSpecificationType>;
 }

@@ -4,7 +4,7 @@ export interface ITicketTypeAttributes {
     name: IMultilingualString;
     description: IMultilingualString;
     notes: IMultilingualString;
-    charge: number;
+    price: number;
     onlineOnly: boolean;
     /**
      * 券種の種別
@@ -30,7 +30,7 @@ export type ITicketType = ITicketTypeAttributes & {
 export interface ITicketTypeSearchConditions {
     limit?: number;
     page?: number;
-    id?: any;
+    id?: string;
     name?: string;
     charge?: number;
 }
