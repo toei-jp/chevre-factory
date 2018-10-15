@@ -39,6 +39,7 @@ export interface ITicketTypeGroupAttributes {
     description: IMultilingualString;
     notes: IMultilingualString;
     ticketTypes: string[];
+    entertainmentType: number;
 }
 /**
  * 券種グループインターフェース
