@@ -1,3 +1,4 @@
+import { IEntertainmentType } from './entertainmentType';
 import IMultilingualString from './multilingualString';
 
 export interface ITicketTypeAttributes {
@@ -32,14 +33,18 @@ export interface ITicketTypeSearchConditions {
     page?: number;
     id?: string;
     name?: string;
-    charge?: number;
+    price?: number;
+    idHasChoose?: string;
 }
 export interface ITicketTypeGroupAttributes {
     name: IMultilingualString;
     description: IMultilingualString;
     notes: IMultilingualString;
     ticketTypes: string[];
-    entertainmentType: number;
+    /**
+     * 興行区分
+     */
+    entertainmentType: IEntertainmentType;
 }
 /**
  * 券種グループインターフェース
