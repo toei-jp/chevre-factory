@@ -31,7 +31,7 @@ export type ITicketType = ITicketTypeAttributes & {
 export interface ITicketTypeSearchConditions {
     limit?: number;
     page?: number;
-    id?: string;
+    id?: string | string[];
     name?: string;
     price?: number;
     idHasChoose?: string;
