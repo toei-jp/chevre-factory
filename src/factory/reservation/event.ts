@@ -44,7 +44,24 @@ export interface ISearchConditions {
      */
     reservationFor?: {
         typeOf?: EventType;
+        /**
+         * 上映イベントID
+         */
         id?: string;
+        superEvent?: {
+            /**
+             * 上映イベントシーリズID
+             */
+            id: string;
+        };
+        /**
+         * 開始日 FROM
+         */
+        startFrom?: Date;
+        /**
+         * 開始日 TO
+         */
+        startThrough?: Date;
     };
     /**
      * 更新日時
