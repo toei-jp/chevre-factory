@@ -145,6 +145,20 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
  * 上映イベントインターフェース
  */
 export type IEvent = EventFactory.IEvent<IAttributes>;
+
+/**
+ * 上映イベント+チケット集計インターフェース
+ */
+export type IEventWithTicketTypeCount = IEvent & {
+    saleTicketCount: number;
+    preSaleTicketCount: number;
+    freeTicketCount: number;
+};
+
+export interface ICountTicketTypePerEventResult {
+    totalCount: number;
+    data: IEventWithTicketTypeCount[];
+}
 /**
  * ソート条件インターフェース
  */
@@ -227,4 +241,21 @@ export interface ISearchConditions {
          */
         workPerformedIdentifiers?: string[];
     };
+}
+
+export interface ICountTicketTypePerEventConditions {
+    /**
+     * 上映イベントシーリズID
+     */
+    id?: string;
+    /**
+     * 開始日 FROM
+     */
+    startFrom?: Date;
+    /**
+     * 開始日 TO
+     */
+    startThrough?: Date;
+    limit: number;
+    page: number;
 }
