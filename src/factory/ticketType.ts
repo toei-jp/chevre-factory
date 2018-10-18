@@ -1,4 +1,4 @@
-import { IEntertainmentType } from './entertainmentType';
+import { IBoxOfficeType } from './boxOfficeType';
 import IMultilingualString from './multilingualString';
 
 export interface ITicketTypeAttributes {
@@ -15,8 +15,14 @@ export interface ITicketTypeAttributes {
     nameForManagementSite: string;
     nameForPrinting: string;
     seatReservationUnit: number;
-    subject: number;
-    subjectException?: number;
+    /**
+     * 細目
+     */
+    subject: string;
+    /**
+     * 興行外細目
+     */
+    nonBoxOfficeSubject?: string;
     indicatorColor: string;
 }
 /**
@@ -44,7 +50,7 @@ export interface ITicketTypeGroupAttributes {
     /**
      * 興行区分
      */
-    entertainmentType: IEntertainmentType;
+    boxOfficeType: IBoxOfficeType;
 }
 /**
  * 券種グループインターフェース

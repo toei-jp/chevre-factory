@@ -7,13 +7,12 @@ import * as CancelReservationActionFactory from './factory/action/cancel/reserva
 import * as ReserveActionFactory from './factory/action/reserve';
 import ActionStatusType from './factory/actionStatusType';
 import ActionType from './factory/actionType';
-
+import * as BoxOfficeTypeFactory from './factory/boxOfficeType';
 import * as ClientUserFactory from './factory/clientUser';
 import * as EmailMessageFactory from './factory/creativeWork/message/email';
 import * as MovieCreativeWorkFactory from './factory/creativeWork/movie';
 import CreativeWorkType from './factory/creativeWorkType';
 import * as DistributionsFactory from './factory/distributions/distribute';
-import * as EntertainmentTypeFactory from './factory/entertainmentType';
 import * as ScreeningEventFactory from './factory/event/screeningEvent';
 import * as ScreeningEventSeriesFactory from './factory/event/screeningEventSeries';
 import EventStatusType from './factory/eventStatusType';
@@ -41,6 +40,7 @@ import ReservationStatusType from './factory/reservationStatusType';
 import ReservationType from './factory/reservationType';
 import SortType from './factory/sortType';
 import SoundFormatType from './factory/soundFormatType';
+import * as SubjectFactory from './factory/subject';
 import * as TicketTypeFactory from './factory/ticketType';
 import { UnitCode } from './factory/unitCode';
 import VideoFormatType from './factory/videoFormatType';
@@ -118,6 +118,7 @@ export namespace action {
     }
     export import reserve = ReserveActionFactory;
 }
+export import boxOfficeType = BoxOfficeTypeFactory;
 export import clientUser = ClientUserFactory;
 export namespace creativeWork {
     export namespace message {
@@ -138,7 +139,6 @@ export namespace event {
     export import screeningEvent = ScreeningEventFactory;
     export import screeningEventSeries = ScreeningEventSeriesFactory;
 }
-export import entertainmentType = EntertainmentTypeFactory;
 export import eventStatusType = EventStatusType;
 export import eventType = EventType;
 export import itemAvailability = ItemAvailability;
@@ -196,6 +196,7 @@ export namespace distributions {
 }
 export import sortType = SortType;
 export import soundFormatType = SoundFormatType;
+export import subject = SubjectFactory;
 export import taskExecutionResult = TaskExecutionResultFactory;
 export import taskName = TaskName;
 export import taskStatus = TaskStatus;
