@@ -35,6 +35,14 @@ export interface ITicketOffer extends IOffer {
     name: IMultilingualString;
     description: IMultilingualString;
     priceSpecification: ITicketPriceSpecification;
+    /**
+     * オンライン利用
+     */
+    isOnlineTicket?: boolean;
+    /**
+     * BOX利用
+     */
+    isBoxTicket?: boolean;
 }
 export interface IAcceptedTicketOfferWithoutDetail {
     id: string;

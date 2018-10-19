@@ -6,12 +6,18 @@ export interface ITicketTypeAttributes {
     description: IMultilingualString;
     notes: IMultilingualString;
     price: number;
-    onlineOnly: boolean;
+    /**
+     * オンライン利用
+     */
+    isOnlineTicket: boolean;
     /**
      * 券種の種別
      */
     typeOfNote: number;
-    boxOnly: boolean;
+    /**
+     * BOX利用
+     */
+    isBoxTicket: boolean;
     nameForManagementSite: string;
     nameForPrinting: string;
     seatReservationUnit: number;
