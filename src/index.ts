@@ -23,6 +23,7 @@ import * as OfferFactory from './factory/offer';
 import OfferType from './factory/offerType';
 import * as OrganizationFactory from './factory/organization';
 import OrganizationType from './factory/organizationType';
+import PaymentMethodType from './factory/paymentMethodType';
 import * as MovieTheaterPlaceFactory from './factory/place/movieTheater';
 import PlaceType from './factory/placeType';
 import PriceCurrency from './factory/priceCurrency';
@@ -46,6 +47,7 @@ import { UnitCode } from './factory/unitCode';
 import VideoFormatType from './factory/videoFormatType';
 
 import * as TaskFactory from './factory/task';
+import * as AggregateScreeningEventTaskFactory from './factory/task/aggregateScreeningEvent';
 import * as CancelPendingReservationTaskFactory from './factory/task/cancelPendingReservation';
 import * as CancelReservationTaskFactory from './factory/task/cancelReservation';
 import * as ReserveTaskFactory from './factory/task/reserve';
@@ -151,6 +153,7 @@ export namespace organization {
     export import IOrganization = OrganizationFactory.IOrganization;
 }
 export import organizationType = OrganizationType;
+export import paymentMethodType = PaymentMethodType;
 export import priceCurrency = PriceCurrency;
 export namespace place {
     export import movieTheater = MovieTheaterPlaceFactory;
@@ -189,6 +192,7 @@ export import reservationType = ReservationType;
 export namespace task {
     export import IAttributes = TaskFactory.IAttributes;
     export import ITask = TaskFactory.ITask;
+    export import aggregateScreeningEvent = AggregateScreeningEventTaskFactory;
     export import cancelPendingReservation = CancelPendingReservationTaskFactory;
     export import cancelReservation = CancelReservationTaskFactory;
     export import reserve = ReserveTaskFactory;
