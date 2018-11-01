@@ -12,17 +12,9 @@ export interface ITicketTypeAttributes {
      */
     availability: ItemAvailability;
     /**
-     * オンライン利用
-     */
-    isOnlineTicket: boolean;
-    /**
      * 券種の種別
      */
     typeOfNote: number;
-    /**
-     * BOX利用
-     */
-    isBoxTicket: boolean;
     nameForManagementSite: string;
     nameForPrinting: string;
     seatReservationUnit: number;
