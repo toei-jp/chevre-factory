@@ -1,8 +1,9 @@
 import { IBoxOfficeType } from './boxOfficeType';
 import ItemAvailability from './itemAvailability';
 import IMultilingualString from './multilingualString';
+import { IOffer } from './offer';
 
-export interface ITicketTypeAttributes {
+export interface ITicketTypeAttributes extends IOffer {
     name: IMultilingualString;
     description: IMultilingualString;
     notes: IMultilingualString;
@@ -17,7 +18,6 @@ export interface ITicketTypeAttributes {
     typeOfNote: number;
     nameForManagementSite: string;
     nameForPrinting: string;
-    seatReservationUnit: number;
     /**
      * 細目
      */
