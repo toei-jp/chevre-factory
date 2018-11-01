@@ -142,34 +142,6 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
      * 参加数
      */
     attendeeCount: Number;
-    /**
-     * ムビチケ対象外
-     * 1 = ON
-     * 0 = OFF
-     */
-    mvtkExcludeFlg: number;
-    /**
-     * 販売開始日
-     */
-    saleStartDate?: Date;
-    /**
-     * オンライン表示開始日
-     */
-    onlineDisplayStartDate?: Date;
-    /**
-     * 上限枚数
-     */
-    maxSeatNumber: number;
-    /**
-     * 先行販売フラグ
-     * 1 = ON
-     * 0 = OFF
-     */
-    preSaleFlg: number;
-    /**
-     * 上映後販売終了時間
-     */
-    endSaleTimeAfterScreening?: number;
 }
 /**
  * 上映イベントインターフェース
@@ -214,20 +186,6 @@ export interface ISearchConditions {
      * イベント名称
      */
     name?: string;
-    /**
-     * 先行販売フラグ
-     */
-    preSaleFlg?: number;
-    /**
-     * 販売開始日時 from
-     * ISO 8601 date format
-     */
-    saleStartFrom?: Date;
-    /**
-     * 販売開始日時 through
-     * ISO 8601 date format
-     */
-    saleStartThrough?: Date;
     /**
      * 開催中 from
      * ISO 8601 date format
