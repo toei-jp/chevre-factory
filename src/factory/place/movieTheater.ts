@@ -1,14 +1,15 @@
 import IMultilingualString from '../multilingualString';
+import * as OfferFactory from '../offer';
 import * as PlaceFactory from '../place';
+import { IQuantitativeValue } from '../quantitativeValue';
 import SortType from '../sortType';
 
 /**
- * 場所としての座席インターフェース
+ * 座席インターフェース
  */
 export interface ISeat extends PlaceFactory.IPlace {
     /**
-     * 枝番号
-     * 座席コードに相当
+     * 枝番号(座席コードに相当)
      */
     branchCode: string;
 }
@@ -21,13 +22,12 @@ export interface IScreeningRoomSection extends PlaceFactory.IPlace {
      */
     containsPlace: ISeat[];
     /**
-     * 枝番号
-     * セクションコードに相当
+     * 枝番号(セクションコードに相当)
      */
     branchCode: string;
 }
 /**
- * 場所としての上映室インターフェース
+ * 上映室インターフェース
  */
 export interface IScreeningRoom extends PlaceFactory.IPlace {
     /**
@@ -43,6 +43,17 @@ export interface IScreeningRoom extends PlaceFactory.IPlace {
      */
     name: IMultilingualString;
 }
+
+/**
+ * 劇場に対するオファーインターフェース
+ */
+export interface IOffer extends OfferFactory.IOffer {
+    /**
+     * 上映イベント開始後の販売猶予期間
+     */
+    availabilityGraceTime?: IQuantitativeValue;
+}
+
 /**
  * place interface without screening room
  */
@@ -65,33 +76,13 @@ export interface IPlaceWithoutScreeningRoom extends PlaceFactory.IPlace {
      */
     kanaName: string;
     /**
-     * 劇場住所
-     */
-    address?: IMultilingualString;
-    /**
      * 電話番号
      */
     telephone: string;
     /**
-     * 販売開始日
+     * 販売情報
      */
-    saleStartDate?: number;
-    /**
-     * 上映後販売終了時間(分)
-     */
-    endSaleTimeAfterScreening?: number;
-    /**
-     * 座席購入上限数
-     */
-    maxSeatNumber: number;
-    /**
-     * サブタイトル
-     */
-    movieSubtitleName?: string;
-    /**
-     * 字幕
-     */
-    subtitleLanguage?: number;
+    offers?: IOffer;
 }
 /**
  * 劇場施設インターフェース

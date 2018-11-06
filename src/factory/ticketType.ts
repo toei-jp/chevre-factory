@@ -2,16 +2,21 @@ import { IBoxOfficeType } from './boxOfficeType';
 import ItemAvailability from './itemAvailability';
 import IMultilingualString from './multilingualString';
 import { IOffer } from './offer';
+import { IQuantitativeValue } from './quantitativeValue';
 
 export interface ITicketTypeAttributes extends IOffer {
     name: IMultilingualString;
+    alternateName?: IMultilingualString;
     description: IMultilingualString;
-    notes: IMultilingualString;
     price: number;
     /**
      * 在庫状況(オンラインor店頭のコントロールが可能)
      */
     availability: ItemAvailability;
+    /**
+     * 適用量(価格単位や量制限のコントロールが可能)
+     */
+    eligibleQuantity: IQuantitativeValue;
     /**
      * 券種の種別
      */
@@ -47,8 +52,8 @@ export interface ITicketTypeSearchConditions {
 }
 export interface ITicketTypeGroupAttributes {
     name: IMultilingualString;
+    alternateName?: IMultilingualString;
     description: IMultilingualString;
-    notes: IMultilingualString;
     ticketTypes: string[];
     /**
      * 興行区分

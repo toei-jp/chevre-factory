@@ -1,6 +1,14 @@
 import * as CreativeWorkFactory from '../creativeWork';
 import { IDistributions } from '../distributions/distribute';
+import * as OfferFactory from '../offer';
 import SortType from '../sortType';
+
+/**
+ * 映画作品に対するオファーインターフェース
+ */
+// tslint:disable-next-line:no-empty-interface
+export interface IOffer extends OfferFactory.IOffer {
+}
 
 /**
  * 映画作品インターフェース
@@ -16,9 +24,11 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
      * 映倫区分(PG12,R15,R18)
      */
     contentRating: string;
-    datePublished?: Date;
+    /**
+     * 販売情報
+     */
+    offers?: IOffer;
     subtitle?: string;
-    scheduleEndDate?: Date;
     /**
      * 配給
      */
@@ -47,6 +57,6 @@ export interface ISearchConditions {
     identifier?: string;
     name?: string;
     datePublishedFrom?: Date;
-    datePublishedTo?: Date;
+    datePublishedThrough?: Date;
     checkScheduleEndDate?: boolean;
 }
