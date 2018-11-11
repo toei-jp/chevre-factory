@@ -5,6 +5,9 @@ import { IOffer } from './offer';
 import { IQuantitativeValue } from './quantitativeValue';
 import { UnitCode } from './unitCode';
 
+/**
+ * 券種属性インターフェース
+ */
 export interface ITicketTypeAttributes extends IOffer {
     name: IMultilingualString;
     alternateName?: IMultilingualString;
@@ -18,6 +21,11 @@ export interface ITicketTypeAttributes extends IOffer {
      * 適用量(価格単位や量制限のコントロールが可能)
      */
     eligibleQuantity: IQuantitativeValue<UnitCode.C62>;
+    /**
+     * 有効なムビチケ券種区分
+     * この値が存在すれば、値の券種区分のムビチケが必須
+     */
+    eligibleMovieTicketType?: string;
     /**
      * 券種の種別
      */
@@ -34,12 +42,14 @@ export interface ITicketTypeAttributes extends IOffer {
     nonBoxOfficeSubject?: string;
     indicatorColor: string;
 }
+
 /**
  * 券種インターフェース
  */
 export type ITicketType = ITicketTypeAttributes & {
     id: string;
 };
+
 /**
  * 検索条件インターフェース
  */
@@ -51,6 +61,7 @@ export interface ITicketTypeSearchConditions {
     price?: number;
     idHasChoose?: string;
 }
+
 export interface ITicketTypeGroupAttributes {
     name: IMultilingualString;
     alternateName?: IMultilingualString;
@@ -61,12 +72,14 @@ export interface ITicketTypeGroupAttributes {
      */
     boxOfficeType: IBoxOfficeType;
 }
+
 /**
  * 券種グループインターフェース
  */
 export type ITicketTypeGroup = ITicketTypeGroupAttributes & {
     id: string;
 };
+
 /**
  * 検索条件インターフェース
  */
