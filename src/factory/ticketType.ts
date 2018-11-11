@@ -6,6 +6,25 @@ import { IQuantitativeValue } from './quantitativeValue';
 import { UnitCode } from './unitCode';
 
 /**
+ * 勘定インターフェース
+ */
+export interface IAccounting {
+    typeOf: 'Accounting';
+    /**
+     * 細目
+     */
+    operatingRevenue: string;
+    /**
+     * 興行外細目
+     */
+    nonOperatingRevenue?: string;
+    /**
+     * 売掛金
+     */
+    accountsReceivable: number;
+}
+
+/**
  * 券種属性インターフェース
  */
 export interface ITicketTypeAttributes extends IOffer {
@@ -32,15 +51,11 @@ export interface ITicketTypeAttributes extends IOffer {
     typeOfNote: number;
     nameForManagementSite: string;
     nameForPrinting: string;
-    /**
-     * 細目
-     */
-    subject: string;
-    /**
-     * 興行外細目
-     */
-    nonBoxOfficeSubject?: string;
     indicatorColor: string;
+    /**
+     * 勘定内容
+     */
+    accounting: IAccounting;
 }
 
 /**
