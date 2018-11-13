@@ -11,11 +11,11 @@ import { UnitCode } from './unitCode';
 export interface IAccounting {
     typeOf: 'Accounting';
     /**
-     * 細目
+     * 営業収益
      */
     operatingRevenue: string;
     /**
-     * 興行外細目
+     * 営業外収益
      */
     nonOperatingRevenue?: string;
     /**
@@ -46,16 +46,16 @@ export interface ITicketTypeAttributes extends IOffer {
      */
     eligibleMovieTicketType?: string;
     /**
+     * 勘定内容
+     */
+    accounting: IAccounting;
+    /**
      * 券種の種別
      */
     typeOfNote: number;
     nameForManagementSite: string;
     nameForPrinting: string;
     indicatorColor: string;
-    /**
-     * 勘定内容
-     */
-    accounting: IAccounting;
 }
 
 /**
