@@ -38,11 +38,11 @@ export interface IAttributes extends EventFactory.IAttributes<EventType.Screenin
     /**
      * 字幕利用可能言語
      */
-    subtitleLanguage?: ILanguage;
+    subtitleLanguage?: ILanguage | null;
     /**
      * 吹替利用可能言語
      */
-    dubLanguage?: ILanguage;
+    dubLanguage?: ILanguage | null;
     /**
      * 上映方式
      */

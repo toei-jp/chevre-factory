@@ -13,11 +13,21 @@ export interface IAccounting {
     /**
      * 営業収益
      */
-    operatingRevenue: string;
+    operatingRevenue: {
+        /**
+         * 勘定科目コード
+         */
+        id: string;
+    };
     /**
      * 営業外収益
      */
-    nonOperatingRevenue?: string;
+    nonOperatingRevenue?: {
+        /**
+         * 勘定科目コード
+         */
+        id: string;
+    };
     /**
      * 売掛金
      */
