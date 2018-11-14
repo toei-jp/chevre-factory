@@ -7,6 +7,8 @@ import * as CancelReservationActionFactory from './factory/action/cancel/reserva
 import * as ReserveActionFactory from './factory/action/reserve';
 import ActionStatusType from './factory/actionStatusType';
 import ActionType from './factory/actionType';
+
+import * as AccountTitleFactory from './factory/accountTitle';
 import * as BoxOfficeTypeFactory from './factory/boxOfficeType';
 import * as ClientUserFactory from './factory/clientUser';
 import * as EmailMessageFactory from './factory/creativeWork/message/email';
@@ -122,6 +124,7 @@ export namespace action {
     }
     export import reserve = ReserveActionFactory;
 }
+export import accountTitle = AccountTitleFactory;
 export import boxOfficeType = BoxOfficeTypeFactory;
 export import clientUser = ClientUserFactory;
 export namespace creativeWork {

@@ -1,3 +1,4 @@
+import { IAccountTitle } from './accountTitle';
 import { IBoxOfficeType } from './boxOfficeType';
 import ItemAvailability from './itemAvailability';
 import IMultilingualString from './multilingualString';
@@ -13,21 +14,11 @@ export interface IAccounting {
     /**
      * 営業収益
      */
-    operatingRevenue: {
-        /**
-         * 勘定科目コード
-         */
-        id: string;
-    };
+    operatingRevenue: IAccountTitle;
     /**
      * 営業外収益
      */
-    nonOperatingRevenue?: {
-        /**
-         * 勘定科目コード
-         */
-        id: string;
-    };
+    nonOperatingRevenue?: IAccountTitle;
     /**
      * 売掛金
      */
