@@ -43,6 +43,7 @@ import * as ReservationFactory from './factory/reservation';
 import * as EventReservationFactory from './factory/reservation/event';
 import ReservationStatusType from './factory/reservationStatusType';
 import ReservationType from './factory/reservationType';
+import * as ServiceTypeFactory from './factory/serviceType';
 import SortType from './factory/sortType';
 import SoundFormatType from './factory/soundFormatType';
 import * as SubjectFactory from './factory/subject';
@@ -207,6 +208,7 @@ export namespace task {
 export namespace distributions {
     export import distribute = DistributionsFactory;
 }
+export import serviceType = ServiceTypeFactory;
 export import sortType = SortType;
 export import soundFormatType = SoundFormatType;
 export import subject = SubjectFactory;
