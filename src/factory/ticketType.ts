@@ -1,4 +1,3 @@
-import { IBoxOfficeType } from './boxOfficeType';
 import ItemAvailability from './itemAvailability';
 import IMultilingualString from './multilingualString';
 import { IOffer } from './offer';
@@ -51,6 +50,10 @@ export interface ITicketTypeSearchConditions {
     name?: string;
     price?: number;
     idHasChoose?: string;
+}
+
+export interface IBoxOfficeType {
+    id: string;
 }
 
 export interface ITicketTypeGroupAttributes {
