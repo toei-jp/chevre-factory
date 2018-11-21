@@ -21,10 +21,6 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
      */
     duration: string;
     /**
-     * 映倫区分(PG12,R15,R18)
-     */
-    contentRating: string;
-    /**
      * 販売情報
      */
     offers?: IOffer;
@@ -34,12 +30,14 @@ export interface ICreativeWork extends CreativeWorkFactory.ICreativeWork {
      */
     distribution: IDistributions;
 }
+
 /**
  * 映倫区分作品インターフェース
  */
 export interface ICreativeWorkRating extends CreativeWorkFactory.ICreativeWork {
     contentRating: string;
 }
+
 /**
  * ソート条件インターフェース
  */
@@ -47,6 +45,7 @@ export interface ISortOrder {
     identifier?: SortType;
     name?: SortType;
 }
+
 /**
  * 検索条件インターフェース
  */
