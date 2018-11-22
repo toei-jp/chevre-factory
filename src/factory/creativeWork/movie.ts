@@ -56,5 +56,5 @@ export interface ISearchConditions {
     name?: string;
     datePublishedFrom?: Date;
     datePublishedThrough?: Date;
-    offers: IOfferSearchConditions;
+    offers?: IOfferSearchConditions;
 }
