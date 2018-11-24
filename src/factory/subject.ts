@@ -1,4 +1,4 @@
-import SortType from './sortType';
+import * as chevre from '@chevre/factory';
 
 export interface ISubjectAttributes {
     /**
@@ -30,8 +30,8 @@ export interface ISubjectAttributes {
  * ソート条件インターフェース
  */
 export interface ISortOrder {
-    subjectClassificationCd?: SortType;
-    subjectClassificationName?: SortType;
+    subjectClassificationCd?: chevre.sortType;
+    subjectClassificationName?: chevre.sortType;
 }
 /**
  * 科目検索条件インターフェース
